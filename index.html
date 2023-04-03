@@ -27,12 +27,26 @@
 			margin: 10px;
 				}
 		
+		.flex-container>div>article{
+			color: white;
+			font-family: arial;
+			text-align: center;
+			background-color: black;
+			padding: 5px;
+			border-radius: 8px;
+			width: 200px;
+			height: 200px;
+			margin: 10px;
+
+		}
+		
 		header{ 
 			background-color: rgba(27,209,84,1.00);
 			padding: 10px;
 			height: 100px;
 			border-radius: 10px;
 			font-family: arial;
+			flex-wrap: wrap;
 		}	
 		
 		section{
@@ -42,29 +56,55 @@
 			border-radius: 10px;
 			text-align: center;
 			font-family: arial;
-		}		
+		}
 		
 		@media screen and (max-width: 600px){
+			.block{
+				margin: 0 auto;
+			}
+		}
+		
+		@media screen and (max-width: 375px){
 			.flex-container>div{
-			width: 560px;
-			flex-direction: column;	
-				
+			width: 372px;
+			flex-direction: column;		
 			}
 			
 		}
 		
 		}
-		@media screen and (max-width:600px){
-			.flex-container>header{
-				width: 600px;
+		@media screen and (max-width:375px){
+			header{
+				width: 375px;
+				text-align: center;
+				margin: 0 auto;
 			}
            }
 		
 		@media screen and (max-width:600px){
 			.flex-container>section{
 				width: 600px;
+				color: pink;
 			}
 		}
+		
+		@media screen and (max-width:600px){
+			div{
+				margin: 0 auto;
+				width: 600px;
+			}
+			
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  			<link rel="stylesheet" href="/resources/demos/style.css">
+  			<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  			<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+			<script>
+  			$( function() {
+    		$( "#accordion" ).accordion();
+  			} );
+  			</script>
+		}
+		
 		
 	</style>	
 </head>
@@ -78,7 +118,7 @@
 	</header>
 		
 		
-		<div style="height:150px; margin-right: 50px;">
+		<div style="height:150px;">
 			
 			<aside>
 				<h2> Welcome to my web page</h2>
@@ -86,23 +126,34 @@
 			
 		</div>	
 		
-	<div>	
+		
 	<section>
-		<h3>Page header</h3>		
+		<h3 id="accordian">Page header</h3>		
 		<p>This is a page description</p>
 	</section>	
 	
 	
 	<div class="flex-container">
-		<div>hello</div>
+		<div style = "width:">hello</div>
 		<div></div>	
+		<div></div>
 		<div></div>
 	</div>
 		
 	<section>
 	</section>
 		
-	</div>
+	<div class="flex-container">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>	
+		
+	<section>
+		This is just for a class project<br>in case anyone's wondering
+	</section>	
+	
 </div>
 </body>
 </html>
